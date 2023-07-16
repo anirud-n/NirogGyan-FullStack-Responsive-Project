@@ -7,3 +7,5 @@
   <li> Front-end: React JS </li>
   <li> Back-end: NODE JS (Express JS) </li>
 </ul>
+
+Project deployed Link : https://anirud-niroggyan-reactjs-project.onrender.com/
