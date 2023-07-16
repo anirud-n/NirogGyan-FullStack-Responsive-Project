@@ -8,7 +8,7 @@
 }
 
 .bg-container {
-  padding: 30px;
+  padding: 2%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,10 +31,27 @@
 
 .footer-text {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 8px;
   color: black;
 }
 
 .span-text {
   font-weight: bold;
+}
+
+.loader-spinner {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer-text {
+    margin-top: 20px;
+    font-size: 12px;
+    color: black;
+  }
 }

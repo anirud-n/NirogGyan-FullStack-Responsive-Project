@@ -1,13 +1,13 @@
 .each-medicine-list {
   margin-top: 20px;
   width: 100%;
-  padding: 25px;
+  padding: 2%;
   border-bottom: 2px dotted grey;
 }
 
 .medicine-name {
   font-family: Serif;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 2px;
   color: #505050;
   margin-bottom: 20px;
@@ -15,25 +15,24 @@
 
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .container-1 {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 100%;
   padding-right: 20px;
 }
 
 .medicine-side-image {
-  width: 100%;
+  width: 50%;
   margin-bottom: 15px;
 }
 
 .side-a-b-images-cont {
   display: flex;
   flex-direction: row;
-  border-bottom: 2px dotted grey;
 }
 
 .each-side-image-cont {
@@ -57,21 +56,19 @@
 
 .reason-text {
   font-size: 17px;
+  margin-bottom: 15px;
 }
 
 .directions-container {
-  padding-left: 20px;
-  padding-right: 20px;
-  border-left: 2px dotted grey;
-  border-right: 2px dotted grey;
-  width: 55%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .direction-detail {
-  font-size: 21px;
+  font-size: 17px;
   color: black;
   margin-bottom: 10px;
   font-weight: 500;
@@ -98,6 +95,7 @@
   width: 100%;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .sun-image {
@@ -131,21 +129,22 @@
 }
 
 .side-effects-container {
-  padding-left: 20px;
-  width: 25%;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .side-effects-list-cont {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .critical-situations {
   font-size: 15px;
   font-style: italic;
   color: black;
+  margin-bottom: 20px;
 }
 
 .single-images-cont {
@@ -153,11 +152,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px dotted grey;
 }
 
 .single-medicine-side-image {
-  width: 70%;
+  width: 50%;
   margin-bottom: 20px;
 }
 
@@ -172,17 +170,198 @@
   display: flex;
   flex-direction: row;
   list-style-type: none;
+  margin-top: 20px;
 }
 
 .move-to-last {
   justify-content: flex-end;
 }
 
-.bold {
-  font-weight: bold;
-}
-.normal {
-  font-weight: normal;
+@media (min-width: 550px) {
+  .each-medicine-list {
+    margin-top: 20px;
+    width: 100%;
+    padding: 25px;
+    border-bottom: 2px dotted grey;
+  }
+
+  .medicine-name {
+    font-family: Serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #505050;
+    margin-bottom: 20px;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container-1 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding-right: 20px;
+  }
+
+  .medicine-side-image {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .side-a-b-images-cont {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px dotted grey;
+  }
+
+  .each-side-image-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heading-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #5e5e5e;
+    font-weight: 200;
+    letter-spacing: 2px;
+  }
+
+  .reason-container {
+    margin-top: 20px;
+  }
+
+  .reason-text {
+    font-size: 17px;
+    margin-bottom: 0;
+  }
+
+  .directions-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 2px dotted grey;
+    border-right: 2px dotted grey;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  .direction-detail {
+    font-size: 21px;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  .instaruction-detail {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .direction-heading-container {
+    width: 100%;
+    letter-spacing: 1px;
+  }
+
+  .highlighted-number {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .medicine-timings-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sun-image {
+    height: 18px;
+    margin-right: 10px;
+  }
+
+  .moon-image {
+    height: 15px;
+  }
+
+  .timing-container {
+    width: 90%;
+    background-color: lightgrey;
+    border: 1px solid grey;
+    height: 25px;
+    padding: 2px;
+    margin-left: 2%;
+    margin-right: 2%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+  }
+  .sun-image-container {
+    width: 3%;
+    padding-right: 20px;
+  }
+
+  .moon-image-container {
+    width: 3%;
+  }
+
+  .side-effects-container {
+    padding-left: 20px;
+    width: 25%;
+    margin-top: 0;
+  }
+
+  .side-effects-list-cont {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .critical-situations {
+    font-size: 15px;
+    font-style: italic;
+    color: black;
+    margin-bottom: 0;
+  }
+
+  .single-images-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px dotted grey;
+  }
+
+  .single-medicine-side-image {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+
+  .time-bar-container {
+    width: 100%;
+  }
+
+  .time-showing-images-container {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin-top: 0;
+  }
+
+  .move-to-last {
+    justify-content: flex-end;
+  }
 }
 
 @media (min-width: 768px) {

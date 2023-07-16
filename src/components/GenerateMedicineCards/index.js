@@ -71,7 +71,6 @@ const GenerateMedicineCards = (props) => {
   }
 
   const isInstructionPresent = detailedInstruction !== "";
-
   const { time, image } = timingsForMedicine;
   const timeArray = time.split(",");
 

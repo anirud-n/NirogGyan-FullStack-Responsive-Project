@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Header from "../Header";
+import { RotatingLines } from "react-loader-spinner";
 import GenerateMedicineCards from "../GenerateMedicineCards";
 import "./index.css";
 
@@ -13,7 +14,6 @@ import "./index.css";
     {
       id: 1,
       medicineName: "IBUPROFEN 600MG TAB",
-      medicineType: "tablet",
       sideAImage:
         "https://res.cloudinary.com/ds1vobcwe/image/upload/v1689357932/IMG_20230714_232103-removebg-preview_iqonqm.png",
       sideBImage:
@@ -24,7 +24,7 @@ import "./index.css";
       timingsForMedicine: {
         time: "8:00AM,12:00PM,4:00PM,8:00PM",
         image:
-          "https://res.cloudinary.com/ds1vobcwe/image/upload/v1689442969/IMG_20230715_230605-removebg-preview_us1drv.png",
+          "https://res.cloudinary.com/ds1vobcwe/image/upload/v1689447079/IMG_20230716_002102_aluiqz.png",
       },
       possibleSideEffects: [
         {
@@ -44,8 +44,7 @@ import "./index.css";
 
     {
       id: 2,
-      medicineName: "INSULIN, GLARGINE, HUMAN 100 UNT/ML ING",
-      medicineType: "syringe",
+      medicineName: "INSULIN, GLARGINE, HUMAN 100 UNT/ML INJ",
       sideAImage:
         "https://res.cloudinary.com/ds1vobcwe/image/upload/v1689417278/Screenshot_2023_0715_160234-removebg-preview_ktfmru.png",
       sideBImage: null,
@@ -56,7 +55,7 @@ import "./index.css";
       timingsForMedicine: {
         time: "Bedtime",
         image:
-          "https://res.cloudinary.com/ds1vobcwe/image/upload/v1689441677/injection-removebg-preview_ucc9hc.png",
+          "https://res.cloudinary.com/ds1vobcwe/image/upload/v1689446975/Screenshot_2023_0716_001805-removebg-preview_uujj7c.png",
       },
       possibleSideEffects: [
         {
@@ -82,7 +81,6 @@ import "./index.css";
     {
       id: 3,
       medicineName: "TERAZOSIN HCL 2MG CAPSULE",
-      medicineType: "capsule",
       sideAImage:
         "https://res.cloudinary.com/ds1vobcwe/image/upload/v1689357895/IMG_20230714_231924-removebg-preview_vujckz.png",
       sideBImage:
@@ -130,6 +128,7 @@ import "./index.css";
 class MedicinePrescription extends Component {
   state = {
     jsonObject: { medicationsList: [] },
+    isLoading: true,
   };
 
   componentDidMount() {
@@ -137,15 +136,23 @@ class MedicinePrescription extends Component {
   }
 
   getData = async () => {
-    const response = await fetch("http://localhost:9000/");
-    const data = await response.json();
-    this.setState({
-      jsonObject: data,
-    });
+    try {
+      const response = await fetch("http://localhost:9000/");
+      const data = await response.json();
+      this.setState({
+        jsonObject: data,
+        isLoading: false,
+      });
+    } catch (err) {
+      console.log("Data fetching failed");
+      this.setState({
+        jsonObject: { medicationsList: [] },
+      });
+    }
   };
 
   render() {
-    const { jsonObject } = this.state;
+    const { jsonObject, isLoading } = this.state;
     const { patientName, dateOfBirth, dateOfIssue, medicationsList } =
       jsonObject;
     return (
@@ -156,11 +163,27 @@ class MedicinePrescription extends Component {
           dateOfIssue={dateOfIssue}
           medicationsList={medicationsList}
         />
-        <ul className="medicines-list-cont">
-          {medicationsList.map((eachObj) => (
-            <GenerateMedicineCards eachObject={eachObj} key={eachObj.id} />
-          ))}
-        </ul>
+
+        <div>
+          {isLoading ? (
+            <div className="loader-spinner">
+              <RotatingLines
+                strokeColor="grey"
+                strokeWidth="5"
+                animationDuration="0.75"
+                width="5%"
+                visible={true}
+              />
+            </div>
+          ) : (
+            <ul className="medicines-list-cont">
+              {medicationsList.map((eachObj) => (
+                <GenerateMedicineCards eachObject={eachObj} key={eachObj.id} />
+              ))}
+            </ul>
+          )}
+        </div>
+
         <div className="footer">
           <p className="footer-text">
             <span className="span-text">MEDICATIONS: </span>ACTIVE MEDICATIONS

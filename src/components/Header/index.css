@@ -1,5 +1,5 @@
 .medication-text {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: bold;
   color: black;
   letter-spacing: 2px;
@@ -11,7 +11,7 @@
 
 .profile-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-bottom: 20px;
   border-bottom: 2px dotted grey;
   margin-bottom: 5px;
@@ -22,7 +22,9 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 40%;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .medicine-logo {
@@ -31,7 +33,7 @@
 }
 
 .active-medicine-text {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
 }
 
@@ -43,23 +45,103 @@
 }
 
 .profile-items {
-  width: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .patient-profile-questions {
   color: #5e5e5e;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 3px;
 }
 
 .patient-profile-answers {
   color: black;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 200;
   margin-left: 20px;
 }
 
+@media (min-width: 555px) {
+  .medication-text {
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 2px;
+  }
+
+  .border-container {
+    border-bottom: 2px dotted grey;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    border-bottom: 2px dotted grey;
+    margin-bottom: 5px;
+  }
+
+  .heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .medicine-logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .active-medicine-text {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .patient-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .profile-items {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .patient-profile-questions {
+    color: #5e5e5e;
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .patient-profile-answers {
+    color: black;
+    font-size: 20px;
+    font-weight: 200;
+    margin-left: 20px;
+  }
+}
+
 @media (min-width: 768px) {
+  .heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 0;
+  }
+
   .medication-text {
     font-size: 20px;
     font-weight: bold;
