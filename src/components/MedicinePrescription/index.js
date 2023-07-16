@@ -6,6 +6,7 @@ import "./index.css";
 
 /*This is the JSON data that is fethed from the API :-
 
+
 {
   patientName: "Joyneel Acharya",
   dateOfBirth: "16 May 1991",
@@ -137,7 +138,9 @@ class MedicinePrescription extends Component {
 
   getData = async () => {
     try {
-      const response = await fetch("http://localhost:9000/");
+      const response = await fetch(
+        "https://niroggyan-patient-data.onrender.com"
+      );
       const data = await response.json();
       this.setState({
         jsonObject: data,
