@@ -1,0 +1,33 @@
+.side-effects-icon {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.each-side-effect-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.side-effect-text{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (min-width:768px){
+  .side-effects-icon {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .each-side-effect-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .side-effect-text{
+      font-size: 18px;
+      font-weight: bold;
+  }
+}

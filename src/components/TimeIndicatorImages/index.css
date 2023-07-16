@@ -1,0 +1,40 @@
+.each-image-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.image-style {
+  width: 70%;
+  margin-bottom: -5%;
+  margin-left: 20%;
+}
+
+.vertical-line {
+  height: 30px;
+  border: 0;
+  border-right: 2px dotted grey;
+}
+
+.no-margin {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .image-style {
+    width: 50%;
+    margin-bottom: -5%;
+    margin-left: 20%;
+  }
+
+  .vertical-line {
+    height: 30px;
+    border: 0;
+    border-right: 3px dotted grey;
+  }
+  .no-margin {
+    margin-left: 0;
+  }
+}

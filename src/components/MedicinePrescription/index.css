@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+
+.bg-container {
+  padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.medicines-list-cont {
+  list-style-type: none;
+  width: 100%;
+}
+
+.footer {
+  margin-top: 5px;
+  width: 100%;
+  border-top: 2px dotted grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 12px;
+  color: black;
+}
+
+.span-text {
+  font-weight: bold;
+}
