@@ -8,4 +8,4 @@
   <li> Back-end: NODE JS (Express JS) </li>
 </ul>
 
-Project deployed Link : https://bit.ly/3PYktWs
+Project deployed Link : https://anirud-niroggyan-react-project.netlify.app/
